@@ -1,3 +1,4 @@
+// pages/index.tsx (or Home.tsx)
 import Head from 'next/head';
 import { useState, ChangeEvent, FormEvent } from 'react';
 import Header from '../components/Header';
@@ -14,7 +15,7 @@ const Home = () => {
   const handleSearchSubmit = (e: FormEvent) => {
     e.preventDefault();
     console.log('Searching for:', searchQuery);
-    // Add search functionality here
+    // Implement actual search functionality here (e.g., fetch memes)
   };
 
   const openModal = () => {
@@ -31,9 +32,9 @@ const Home = () => {
         <title>Based Memes</title>
       </Head>
       <Header title="Based Memes" buttonText="Create a Meme" />
-      <main style={{ padding: '20px' }}>
-        <form onSubmit={handleSearchSubmit} style={{ display: 'flex', marginBottom: '20px' }}>
-          <select style={{ marginRight: '10px', padding: '10px' }}>
+      <main className="main-container">
+        <form onSubmit={handleSearchSubmit} className="search-form">
+          <select className="search-select">
             <option value="all">All</option>
             {/* Add more options as needed */}
           </select>
@@ -42,16 +43,42 @@ const Home = () => {
             value={searchQuery}
             onChange={handleSearchChange}
             placeholder="Search for memes"
-            style={{ flex: 1, padding: '10px' }}
+            className="search-input"
           />
-          <button type="submit" style={{ marginLeft: '10px' }}>Search</button>
+          <button type="submit" className="search-button">Search</button>
         </form>
-        <button onClick={openModal} style={{ marginBottom: '20px' }}>Create a Meme</button>
+        <button onClick={openModal} className="create-meme-button">Create a Meme</button>
         <UploadModal isOpen={isModalOpen} onClose={closeModal} />
-        <section>
+        <section className="content-section">
           {/* Add content here */}
         </section>
       </main>
+      <style jsx>{`
+        .main-container {
+          padding: 20px;
+        }
+        .search-form {
+          display: flex;
+          margin-bottom: 20px;
+        }
+        .search-select,
+        .search-input {
+          margin-right: 10px;
+          padding: 10px;
+        }
+        .search-input {
+          flex: 1;
+        }
+        .search-button {
+          margin-left: 10px;
+        }
+        .create-meme-button {
+          margin-bottom: 20px;
+        }
+        .content-section {
+          /* Add styles for content section */
+        }
+      `}</style>
     </div>
   );
 };
