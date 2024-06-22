@@ -31,7 +31,7 @@ const Home = () => {
       <Head>
         <title>Based Memes</title>
       </Head>
-      <Header title="Based Memes" buttonText="Create a Meme" />
+      <Header title="Based Memes" />
       <main className="main-container">
         <form onSubmit={handleSearchSubmit} className="search-form">
           <select className="search-select">
@@ -65,15 +65,36 @@ const Home = () => {
         .search-input {
           margin-right: 10px;
           padding: 10px;
+          font-size: 14px; /* Adjust font size as needed */
         }
         .search-input {
           flex: 1;
         }
         .search-button {
           margin-left: 10px;
+          padding: 10px 15px;
+          background-color: #0070f3; /* Example color */
+          color: white;
+          border: none;
+          cursor: pointer;
+          border-radius: 5px;
+          transition: background-color 0.3s ease;
+        }
+        .search-button:hover {
+          background-color: #0058ad; /* Darker shade on hover */
         }
         .create-meme-button {
           margin-bottom: 20px;
+          padding: 12px 20px;
+          background-color: #4caf50; /* Example color */
+          color: white;
+          border: none;
+          cursor: pointer;
+          border-radius: 5px;
+          transition: background-color 0.3s ease;
+        }
+        .create-meme-button:hover {
+          background-color: #45a049; /* Darker shade on hover */
         }
         .content-section {
           /* Add styles for content section */
