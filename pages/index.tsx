@@ -1,9 +1,11 @@
 import Head from 'next/head';
 import { useState, ChangeEvent, FormEvent } from 'react';
 import Header from '../components/Header';
+import UploadModal from '../components/UploadModal';
 
 const Home = () => {
   const [searchQuery, setSearchQuery] = useState<string>('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
@@ -15,10 +17,18 @@ const Home = () => {
     // Add search functionality here
   };
 
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div>
       <Head>
-        <title>Memes</title>
+        <title>Based Memes</title>
       </Head>
       <Header title="Based Memes" buttonText="Create a Meme" />
       <main style={{ padding: '20px' }}>
@@ -36,6 +46,8 @@ const Home = () => {
           />
           <button type="submit" style={{ marginLeft: '10px' }}>Search</button>
         </form>
+        <button onClick={openModal} style={{ marginBottom: '20px' }}>Create a Meme</button>
+        <UploadModal isOpen={isModalOpen} onClose={closeModal} />
         <section>
           {/* Add content here */}
         </section>
