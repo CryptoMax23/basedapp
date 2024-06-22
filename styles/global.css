@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000; /* black background */
+  color: #fff; /* white text */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #1e90ff; /* blue color */
+}
+
+button {
+  background-color: #1e90ff; /* blue background */
+  color: #fff; /* white text */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #1c86ee; /* darker blue on hover */
+}
