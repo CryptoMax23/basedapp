@@ -1,6 +1,3 @@
-/* styles/style.css */
-
-/* Reset default styles and set basic layout */
 body {
     font-family: Arial, sans-serif;
     margin: 0;

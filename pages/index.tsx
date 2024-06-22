@@ -54,7 +54,7 @@ const Home = () => {
         </section>
       </main>
       <style jsx>{`
-        .main-container {
+    .main-container {
           padding: 20px;
         }
         .search-form {
@@ -86,7 +86,7 @@ const Home = () => {
         .create-meme-button {
           margin-bottom: 20px;
           padding: 12px 20px;
-          background-color: #4caf50; /* Example color */
+          background-color: #0070f3; /* Example color */
           color: white;
           border: none;
           cursor: pointer;
@@ -94,7 +94,7 @@ const Home = () => {
           transition: background-color 0.3s ease;
         }
         .create-meme-button:hover {
-          background-color: #45a049; /* Darker shade on hover */
+          background-color: #0058ad; /* Darker shade on hover */
         }
         .content-section {
           /* Add styles for content section */

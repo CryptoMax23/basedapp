@@ -65,7 +65,7 @@ const UploadModal: React.FC<UploadModalProps> = ({ isOpen, onClose }) => {
     <div className={styles.modal}>
       <div className={styles.modalContent}>
         <span className={styles.closeButton} onClick={onClose}>&times;</span>
-        <h2>Upload a Based Meme</h2>
+        <h2>Upload Based Meme</h2>
         <form onSubmit={handleSubmit} className={styles.formContainer}>
           <div className={styles.fileInput}>
             <label htmlFor="memeFile">Select Meme:</label>

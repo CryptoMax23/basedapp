@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #000; /* black background */
+  background-color: #0663c7; /* black background */
   color: #fff; /* white text */
 }
 
@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 button {
-  background-color: #1e90ff; /* blue background */
+  background-color: #e8ecf1; /* blue background */
   color: #fff; /* white text */
   border: none;
   padding: 10px 20px;
@@ -19,5 +19,5 @@ button {
 }
 
 button:hover {
-  background-color: #1c86ee; /* darker blue on hover */
+  background-color: #01070e; /* darker blue on hover */
 }
