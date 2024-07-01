@@ -29,9 +29,9 @@ const Home = () => {
   return (
     <div>
       <Head>
-        <title>Based Memes</title>
+        <title>BasedMemes</title>
       </Head>
-      <Header title="Based Memes" />
+      <Header title="BasedMemes" />
       <main className="main-container">
         <form onSubmit={handleSearchSubmit} className="search-form">
           <select className="search-select">
